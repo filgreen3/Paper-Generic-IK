@@ -44,6 +44,8 @@ public class LegIK3D : GenericSubTargetIK3D
 
         for (int i = 1; i < Bones.Count; i++)
             Bones[i].position = Bones[i - 1].position + Bones[i - 1].transf.forward * Bones[i - 1].lenght;
+
+
     }
 
     private bool process;
@@ -66,6 +68,7 @@ public class LegIK3D : GenericSubTargetIK3D
         }
         savePoint = Vector3.Lerp(savePoint, currPoint, t / defVlaue);
         process = false;
+
         defVlaue = Random.value;
 
 
