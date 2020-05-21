@@ -10,3 +10,4 @@ public class Bone
     public Vector2 endPoint => position + (Vector2.right * Mathf.Cos(rotation / 57.2f) + Vector2.up * Mathf.Sin(rotation / 57.2f)) * lenght;
     public Vector2 position { get => (Vector2)transf.position; set => transf.position = value; }
 }
+

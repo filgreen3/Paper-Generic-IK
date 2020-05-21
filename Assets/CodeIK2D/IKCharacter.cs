@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class IKCharacter : MonoBehaviour
 {
-    public IKStructure[] IKs;
     public Rigidbody2D Rig;
     public Vector2 lowObject;
 
@@ -24,14 +23,8 @@ public class IKCharacter : MonoBehaviour
     private void Update()
     {
 
-        Rig.rotation = (strange1- strange2) * rote;
+        Rig.rotation = (strange1 - strange2) * rote;
 
-
-
-        foreach (var item in IKs)
-        {
-            item.BodyPart.Active = strange > 0.1f;
-        }
 
 
 
